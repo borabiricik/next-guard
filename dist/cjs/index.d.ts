@@ -1,2 +1,3 @@
 import { Dummy } from './components/Dummy';
-export { Dummy };
+import { NextGuard } from './middleware/server';
+export { Dummy, NextGuard };
