@@ -4,9 +4,10 @@ interface NextGuardConfigProps {
 
 type NextGuardProps = NextGuardConfigProps
 
-const NextGuard = (config: NextGuardProps) => {
-  const { cookieName = 'next-guard-cookie' } = config
-  return Response.json({ cookieName })
+class NextGuard {
+  constructor(props: NextGuardProps) {
+    console.log({ props })
+  }
 }
 
 export { NextGuard }

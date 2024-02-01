@@ -5,5 +5,5 @@ export function GET(req: NextRequest) {
   const response = NextGuard({})
   console.log({ response })
 
-  return response
+  return NextResponse.json(response)
 }
