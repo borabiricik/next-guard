@@ -4,10 +4,16 @@ interface NextGuardConfigProps {
     cookieName?: string;
 }
 type NextGuardProps = NextGuardConfigProps;
-declare const NextGuard: (config: NextGuardProps) => NextResponse<(req: NextApiRequest) => {
+declare const NextGuard: (config: NextGuardProps) => {
     handlers: {
-        GET: any;
-        POST: any;
+        GET: (req: NextApiRequest) => NextResponse<{
+            req: NextApiRequest;
+            config: NextGuardConfigProps;
+        }>;
+        POST: (req: NextApiRequest) => NextResponse<{
+            req: NextApiRequest;
+            config: NextGuardConfigProps;
+        }>;
     };
-}>;
+};
 export { NextGuard };
