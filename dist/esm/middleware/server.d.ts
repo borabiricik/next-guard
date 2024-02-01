@@ -1,6 +1,7 @@
-export default function NextGuard(): {
+declare const NextGuard: () => {
     handlers: {
         GET: () => void;
         POST: () => void;
     };
 };
+export { NextGuard };
