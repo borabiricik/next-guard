@@ -9,8 +9,13 @@ type NextGuardProps = NextGuardConfigProps
 
 const NextGuard = (config: NextGuardProps) => {
   const httpHandler = (req: NextApiRequest) => {
-    console.log({ req })
-    return config
+    console.log({ req, config })
+    return {
+      handlers: {
+        GET: httpHandler,
+        POST: httpHandler,
+      },
+    }
   }
   return NextResponse.json(httpHandler)
 }
