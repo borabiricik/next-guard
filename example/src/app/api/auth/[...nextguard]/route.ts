@@ -1,5 +1,9 @@
 import { NextGuard } from 'next-guard'
+import { NextRequest, NextResponse } from 'next/server'
 
-const handler = NextGuard()
+export function GET(req: NextRequest) {
+  const response = NextGuard({})
+  console.log({ response })
 
-export { handler as GET, handler as POST }
+  return response
+}

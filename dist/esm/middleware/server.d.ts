@@ -1,5 +1,6 @@
 interface NextGuardConfigProps {
+    cookieName?: string;
 }
-type NextGuardProps = NextGuardConfigProps | (() => NextGuardConfigProps);
-declare const NextGuard: (config: NextGuardProps) => NextGuardProps;
+type NextGuardProps = NextGuardConfigProps;
+declare const NextGuard: (config: NextGuardProps) => Response;
 export { NextGuard };

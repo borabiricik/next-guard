@@ -1,12 +1,12 @@
-interface NextGuardConfigProps {}
+interface NextGuardConfigProps {
+  cookieName?: string
+}
 
-type NextGuardProps = NextGuardConfigProps | (() => NextGuardConfigProps)
+type NextGuardProps = NextGuardConfigProps
 
 const NextGuard = (config: NextGuardProps) => {
-  if (typeof config === 'function') {
-    config = config()
-  }
-  return config
+  const { cookieName = 'next-guard-cookie' } = config
+  return Response.json({ cookieName })
 }
 
 export { NextGuard }

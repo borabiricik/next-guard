@@ -1,8 +1,6 @@
 var NextGuard = function (config) {
-    if (typeof config === 'function') {
-        config = config();
-    }
-    return config;
+    var _a = config.cookieName, cookieName = _a === void 0 ? 'next-guard-cookie' : _a;
+    return Response.json({ cookieName: cookieName });
 };
 export { NextGuard };
 //# sourceMappingURL=server.js.map
