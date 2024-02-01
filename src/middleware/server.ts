@@ -4,9 +4,15 @@ interface NextGuardConfigProps {
 
 type NextGuardProps = NextGuardConfigProps
 
-class NextGuard {
-  constructor(props: NextGuardProps) {
-    console.log({ props })
+const NextGuard = (config: NextGuardProps) => {
+  const httpHandler = () => {
+    return config
+  }
+  return {
+    handlers: {
+      GET: httpHandler,
+      POST: httpHandler,
+    },
   }
 }
 
