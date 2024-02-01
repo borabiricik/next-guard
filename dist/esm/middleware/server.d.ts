@@ -1,3 +1,6 @@
-export declare class NextGuard {
-    constructor();
-}
+export default function NextGuard(): {
+    handlers: {
+        GET: () => void;
+        POST: () => void;
+    };
+};

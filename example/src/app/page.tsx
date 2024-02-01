@@ -1,6 +1,9 @@
-import Image from 'next/image'
-import {} from 'next-guard'
+import { Dummy } from 'next-guard'
 
 export default function Home() {
-  return <main></main>
+  return (
+    <main>
+      <Dummy name='test' />
+    </main>
+  )
 }

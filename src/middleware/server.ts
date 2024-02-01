@@ -1,5 +1,7 @@
-export class NextGuard {
-  constructor() {
-    console.log('constructor is working now')
+export default function NextGuard() {
+  const httpHandler = () => {}
+
+  return {
+    handlers: { GET: httpHandler, POST: httpHandler },
   }
 }
