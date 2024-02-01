@@ -1,7 +1,9 @@
-export default function NextGuard() {
+const NextGuard = () => {
   const httpHandler = () => {}
 
   return {
     handlers: { GET: httpHandler, POST: httpHandler },
   }
 }
+
+export { NextGuard }

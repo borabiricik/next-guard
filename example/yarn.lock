@@ -1745,7 +1745,7 @@ natural-compare@^1.4.0:
 
 "next-guard@https://github.com/borabiricik/next-guard.git":
   version "1.0.0"
-  resolved "https://github.com/borabiricik/next-guard.git#9fabb021a4c09eb53aecb7f87d148bc9ebfd9212"
+  resolved "https://github.com/borabiricik/next-guard.git#4c2b3a0560a30978086fd93ae2a08e2fd3f3a1c0"
 
 next@14.1.0:
   version "14.1.0"
