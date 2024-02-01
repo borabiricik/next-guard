@@ -3,5 +3,4 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export const {
   handlers: { GET, POST },
-  auth,
-} = new NextGuard({})
+} = NextGuard({})

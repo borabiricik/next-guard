@@ -1,13 +1,10 @@
+import { NextResponse } from 'next/server';
 var NextGuard = function (config) {
-    var httpHandler = function () {
+    var httpHandler = function (req) {
+        console.log({ req: req });
         return config;
     };
-    return {
-        handlers: {
-            GET: httpHandler,
-            POST: httpHandler,
-        },
-    };
+    return NextResponse.json(httpHandler);
 };
 export { NextGuard };
 //# sourceMappingURL=server.js.map

@@ -1,3 +1,6 @@
+import { NextApiRequest } from 'next'
+import { NextResponse } from 'next/server'
+
 interface NextGuardConfigProps {
   cookieName?: string
 }
@@ -5,15 +8,11 @@ interface NextGuardConfigProps {
 type NextGuardProps = NextGuardConfigProps
 
 const NextGuard = (config: NextGuardProps) => {
-  const httpHandler = () => {
+  const httpHandler = (req: NextApiRequest) => {
+    console.log({ req })
     return config
   }
-  return {
-    handlers: {
-      GET: httpHandler,
-      POST: httpHandler,
-    },
-  }
+  return NextResponse.json(httpHandler)
 }
 
 export { NextGuard }
